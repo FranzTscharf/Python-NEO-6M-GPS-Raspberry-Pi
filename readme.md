@@ -1,4 +1,4 @@
-#Python-NEO-6M-GPS-Raspberry-Pi
+# Python-NEO-6M-GPS-Raspberry-Pi
 Python script for the NEO-6M GPS module on the Raspberry Pi
 
 ## Getting Started
