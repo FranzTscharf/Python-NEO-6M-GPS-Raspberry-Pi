@@ -1,5 +1,7 @@
 # Python-NEO-6M-GPS-Raspberry-Pi
 Python script for the NEO-6M GPS module on the Raspberry Pi
+## Connecting Schema
+![Image of Yaktocat](https://raspberrytips.nl/wp-content/uploads/2016/12/UBOLX-NEO-6M-RPI-600x274.png)
 
 ## Getting Started
 These instructions will get you a quick start with the script.
