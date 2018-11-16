@@ -2,19 +2,6 @@
 Python script for the NEO-6M GPS module on the Raspberry Pi
 ## Connecting Schema
 ![Image of Yaktocat](https://raspberrytips.nl/wp-content/uploads/2016/12/UBOLX-NEO-6M-RPI-600x274.png)
-
-## Getting Started
-These instructions will get you a quick start with the script.
-* look if the terminal output of the sensor works
-```
-cat /dev/ttyAMA0
-```
-* Run the script
-```
-cd Python-NEO-6M-GPS-Raspberry-Pi
-sudo python Neo6mGPS.py
-```
-
 ## Dependencies
 * pip installed.
 ```
@@ -23,6 +10,17 @@ sudo apt-get install python-pip
 * you will need pynmea2.
 ```
 sudo pip install pynmea2
+```
+## Getting Started
+These instructions will get you a quick start with the script and please check before if you have the dependencies installed. Also connect the raspberry like the obove schemata.
+* Look if the terminal output of the sensor works
+```
+cat /dev/ttyAMA0
+```
+* Run the script
+```
+cd Python-NEO-6M-GPS-Raspberry-Pi
+sudo python Neo6mGPS.py
 ```
 
 ## Example Code
