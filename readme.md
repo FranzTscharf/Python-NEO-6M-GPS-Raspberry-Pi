@@ -27,6 +27,10 @@ and replace all with the following lines:
 ```
 dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
 ```
+* reboot the system
+```
+sudo reboot now
+```
 ## Getting Started
 These instructions will get you a quick start with the script and please check before if you have the dependencies installed. Also connect the raspberry like the obove schemata.
 * Look if the terminal output of the sensor works
