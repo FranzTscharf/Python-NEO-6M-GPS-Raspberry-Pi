@@ -1,11 +1,11 @@
 # Python-NEO-6M-GPS-Raspberry-Pi
 Python script for the NEO-6M GPS module on the Raspberry Pi
-## Connecting Schema
+## 1. Connecting Schema
 ![Image of Yaktocat](https://raspberrytips.nl/wp-content/uploads/2016/12/UBOLX-NEO-6M-RPI-600x274.png)
 ![Image of Yaktoc2at](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2012/06/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png)
 ![Image of Yaktoc2at2](
 http://www.gtkdb.de/images/00532_Raspberry_Pi_NEO-6M_GPS-Modul_-_Schaltplan.png)
-## Dependencies
+## 2. Install the Dependencies
 * pip installed.
 ```
 sudo apt-get install python-pip
@@ -18,7 +18,7 @@ sudo pip install pynmea2
 ```
 sudo apt-get install gpsd gpsd-clients python-gps minicom
 ```
-## Configuration
+## 3. Configurate the services
 * Serial port modify cmdline.txt:
 ```
 sudo nano /boot/cmdline.txt
@@ -48,7 +48,23 @@ sudo reboot now
 ```
 stty -F /dev/ttyAMA0 9600
 ```
-## Getting Started
+* Connect AMA0 to the GPS Software 
+First kill the process and add the device to gpsd tool
+```
+sudo killall gpsd
+sudo nano /etc/default/gpsd
+```
+Edit the file /etc/default/gpsd and add your serial port in DEVICES, like
+```
+DEVICES="/dev/ttyAMA0"
+```
+* Restart the Software
+```
+sudo systemctl enable gpsd.socket
+sudo systemctl start gpsd.socket 
+sudo cgps -s
+```
+## 4. Run the Example
 These instructions will get you a quick start with the script and please check before if you have the dependencies installed. Also connect the raspberry like the obove schemata.
 * Look if the terminal output of the sensor works
 ```
@@ -64,7 +80,7 @@ cd Python-NEO-6M-GPS-Raspberry-Pi
 sudo python Neo6mGPS.py
 ```
 
-## Example Code
+## 5. Example source code
 ```
 import serial
 import pynmea2
