@@ -18,7 +18,11 @@ sudo pip install pynmea2
 ```
 sudo apt-get install gpsd gpsd-clients python-gps
 ```
-
+## Configuration
+* Serial
+```
+sudo nano /boot/cmdline.txt
+```
 ## Getting Started
 These instructions will get you a quick start with the script and please check before if you have the dependencies installed. Also connect the raspberry like the obove schemata.
 * Look if the terminal output of the sensor works
