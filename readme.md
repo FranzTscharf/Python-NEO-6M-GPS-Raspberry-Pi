@@ -19,7 +19,7 @@ sudo pip install pynmea2
 sudo apt-get install gpsd gpsd-clients python-gps minicom
 ```
 ## Configuration
-* Serial
+* Serial:
 ```
 sudo nano /boot/cmdline.txt
 ```
@@ -27,9 +27,13 @@ and replace all with the following lines:
 ```
 dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
 ```
-* reboot the system
+* reboot the system:
 ```
 sudo reboot now
+```
+* Configure the module for the 9600 rate:
+```
+stty -F /dev/ttyAMA0 9600
 ```
 ## Getting Started
 These instructions will get you a quick start with the script and please check before if you have the dependencies installed. Also connect the raspberry like the obove schemata.
