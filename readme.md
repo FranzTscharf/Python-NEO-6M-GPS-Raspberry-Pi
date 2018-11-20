@@ -19,13 +19,26 @@ sudo pip install pynmea2
 sudo apt-get install gpsd gpsd-clients python-gps minicom
 ```
 ## Configuration
-* Serial:
+* Serial port modify cmdline.txt:
 ```
 sudo nano /boot/cmdline.txt
 ```
 and replace all with the following lines:
 ```
-dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+```
+* Change startup settings:
+```
+sudo nano /boot/config.txt
+```
+and at the end of the file add the following lines:
+```
+dtparam=spi=on
+dtoverlay=pi3-disable-bt
+core_freq=250
+enable_uart=1
+force_turbo=1
+init_uart_baud=9600
 ```
 * reboot the system:
 ```
