@@ -16,7 +16,7 @@ sudo pip install pynmea2
 ```
 * You need the GPS software
 ```
-sudo apt-get install gpsd gpsd-clients python-gps
+sudo apt-get install gpsd gpsd-clients python-gps minicom
 ```
 ## Configuration
 * Serial
