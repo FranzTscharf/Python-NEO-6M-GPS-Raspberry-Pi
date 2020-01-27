@@ -79,7 +79,7 @@ cgps -s
 cd Python-NEO-6M-GPS-Raspberry-Pi
 sudo python Neo6mGPS.py
 ```
-
+The above examples can take up too 10-20min to find a GPS signal for the first time. After this the gps module will be able to find the gps signal a lot faster. That mean please leave the script or the cat command running for a coupe of minutes. 
 ## 5. Example source code
 ```
 import serial
